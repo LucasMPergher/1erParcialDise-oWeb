@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CafeMind - Café para la mente</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <header>
+      <nav id="navbar">
+        <img src="imagenes/taza.png" alt="CafeMind" class="logo" />
+        <ul>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#Caracteristicas">Características</a></li>
+          <li><a href="#promo">Promoción</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="hero">
+        <h1>CafeMind</h1>
+        <p>El café que despierta tu mente.</p>
+      </div>
+    </header>
+
+    <main>
+      <section id="beneficios">
+        <h2>¿Por qué CafeMind?</h2>
+        <p>
+          Café premium con ingredientes que estimulan tu enfoque y productividad
+          sin nerviosismo.
+        </p>
+      </section>
+
+      <section id="Caracteristicas" class="section-dark">
+        <div class="container">
+          <h2>Características Innovadoras</h2>
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">🧠</div>
+              <h3>Estímulo Cognitivo</h3>
+              <p>
+                Ingredientes seleccionados para mejorar tu enfoque mental y
+                creatividad.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">⚡</div>
+              <h3>Energía Natural</h3>
+              <p>
+                Con cafeína de yerba mate y extractos naturales que energizan
+                sin agitarte.
+              </p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">🌱</div>
+              <h3>Sustentable</h3>
+              <p>Empaque biodegradable y compromiso con el medio ambiente.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="promo">
+        <h2>Descuento Especial</h2>
+        <label for="descuento">Ingresa un % de descuento:</label>
+        <input type="number" id="descuento" placeholder="Ej:10" />
+        <button onclick="calcularDescuento()">Calcular precio final</button>
+        <p id="precioFinal"></p>
+      </section>
+
+      <section id="contacto">
+        <h2>Contáctanos</h2>
+        <form
+          id="formulario"
+          method="POST"
+          action="formulario.php"
+          onsubmit="return validarFormulario()"
+        >
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="asunto">Asunto:</label>
+          <input type="text" id="asunto" name="asunto" required />
+
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" required></textarea>
+
+          <input type="submit" value="Enviar Mensaje" />
+        </form>
+        <p id="respuesta"></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 CafeMind. Café para tu mente.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

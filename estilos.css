@@ -1,0 +1,181 @@
+/* Reset básico */
+body, h1, h2, p, ul {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Estilo general */
+body {
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  position: relative;
+}
+nav.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #444;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav ul li {
+  margin-left: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+}
+.logo {
+  height: 40px;
+  background-color: #c8e6c9;
+  border-radius: 10%;
+  padding: 2px;
+}
+
+/* Hero */
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: #c8e6c9;
+}
+.hero h1 {
+  font-size: 48px;
+  text-shadow: 2px 2px #555;
+}
+
+section {
+  padding: 40px 20px;
+}
+#promo input, #promo button {
+  margin-top: 10px;
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: none;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#promo input {
+  width: 100%;
+  max-width: 300px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+#promo button {
+  background-color: var(--primary-color);
+  color: rgb(53, 29, 29);
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#promo button:hover {
+  background-color: #abb3b9; /* o un tono más oscuro del color principal */
+  transform: scale(1.05);
+}
+
+#promo button:active {
+  transform: scale(0.98);
+}
+
+#precioFinal {
+  margin-top: 25px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+
+#Caracteristicas {
+    padding: 80px 0;
+    background-color: #472a2a; /* color oscuro para contraste */
+    color: #f2f2f2;
+}
+
+#Caracteristicas h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background-color: #fff;
+    color: #333;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(90, 89, 89, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+}
